@@ -29,7 +29,7 @@ a{color:inherit}
 .btn-principal:hover{background:transparent;color:var(--azul)}
 .btn-lineal{color:var(--acero);margin-left:10px}
 .btn-lineal:hover{background:var(--azul);color:var(--marino-2)}
-.logo-hero{width:100%;max-width:340px;justify-self:center}
+.logo-hero{width:100%;max-width:340px;height:auto;justify-self:center;background:var(--blanco);padding:32px;border-radius:4px}
 
 /* Secciones */
 section{padding:80px 0}
@@ -75,7 +75,7 @@ footer{background:var(--marino-2);color:var(--acero-2);padding:32px 0;font-size:
   .nav ul{display:none}
   .hero .wrap,.dos,.contacto-grid{grid-template-columns:1fr}
   .hero .wrap{padding-top:48px;padding-bottom:56px}
-  .logo-hero{max-width:180px;justify-self:start}
+  .logo-hero{max-width:280px;padding:20px;justify-self:start}
   .servicios li{grid-template-columns:1fr;gap:4px}
   section{padding:56px 0}
   .btn-lineal{margin:12px 0 0}
