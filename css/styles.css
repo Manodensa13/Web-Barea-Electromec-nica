@@ -1,324 +1,85 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+:root{--grafito:#14171a;--acero:#e8ebed;--acero-2:#d3d8dc;--gris:#5d6770;--cobre:#c8642b;--blanco:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;line-height:1.6;color:var(--grafito);background:var(--acero)}
+h1,h2,h3,.marca,.tel-grande{font-family:'Barlow Condensed','Arial Narrow',sans-serif;line-height:1.05;letter-spacing:.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobre);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+/* Nav: fija solo en escritorio */
+.nav{background:var(--grafito);color:var(--acero)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.nav strong{font:600 1.3rem 'Barlow Condensed',sans-serif}
+.nav ul{display:flex;gap:26px;list-style:none}
+.nav a{text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--cobre)}
+@media(min-width:769px){.nav{position:sticky;top:0;z-index:50}}
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Encabezado */
-header {
-    background: linear-gradient(135deg, #1e3d6f 0%, #2c5aa0 100%);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-header h1 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 1.3em;
-    opacity: 0.95;
-    margin-bottom: 25px;
-}
-
-.btn-llamada {
-    display: inline-block;
-    background: #ff6b35;
-    color: white;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background 0.3s;
-}
-
-.btn-llamada:hover {
-    background: #e55a2b;
-}
-
-/* Navegación */
-nav {
-    background: #1e3d6f;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: rgba(255,255,255,0.1);
-}
+/* Hero */
+.hero{background:var(--grafito);color:var(--acero);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:80px}
+.hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:700;margin-bottom:22px}
+.hero p{max-width:46ch;color:var(--acero-2);font-size:1.15rem;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 26px;font-weight:600;text-decoration:none;border:2px solid var(--cobre);transition:background .2s,color .2s}
+.btn-principal{background:var(--cobre);color:var(--blanco)}
+.btn-principal:hover{background:transparent;color:var(--cobre)}
+.btn-lineal{color:var(--acero);margin-left:10px}
+.btn-lineal:hover{background:var(--cobre);color:var(--blanco)}
+.estator{width:100%;max-width:400px;justify-self:center;animation:giro 90s linear infinite}
+@keyframes giro{to{transform:rotate(360deg)}}
 
 /* Secciones */
-section {
-    padding: 50px 20px;
-}
+section{padding:80px 0}
+h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;margin-bottom:36px;max-width:18ch}
 
-section h2 {
-    color: #1e3d6f;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 2em;
-}
-
-/* Servicios grid */
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.servicio {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid #2c5aa0;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.servicio h3 {
-    color: #1e3d6f;
-    margin-bottom: 12px;
-    font-size: 1.3em;
-}
-
-.servicio p {
-    color: #555;
-}
-
-/* Fondo gris */
-.bg-gris {
-    background: #f5f5f5;
-}
+/* Servicios: lista con filas */
+.servicios li{list-style:none;display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:24px;padding:22px 0;border-top:1px solid var(--acero-2)}
+.servicios li:last-child{border-bottom:1px solid var(--acero-2)}
+.servicios h3{font-size:1.7rem;font-weight:600}
+.servicios p{color:var(--gris);max-width:60ch}
 
 /* Marcas */
-.marcas-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
+.marcas{background:var(--grafito);color:var(--acero)}
+.marcas h2{color:var(--acero)}
+.marcas-lista{display:flex;flex-wrap:wrap;gap:12px 48px}
+.marca{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;color:var(--acero-2)}
+.marca:hover{color:var(--cobre)}
+.marcas small{display:block;margin-top:24px;color:var(--gris)}
 
-.marca {
-    background: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: #1e3d6f;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Sectores */
-.sectores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
-
-.sector {
-    background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
-    color: white;
-    padding: 35px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.sector h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-.sector p {
-    opacity: 0.95;
-}
-
-/* Fondo azul */
-.bg-azul {
-    background: linear-gradient(135deg, #1e3d6f 0%, #2c5aa0 100%);
-    color: white;
-}
-
-.bg-azul h2 {
-    color: white;
-}
-
-.ventajas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.ventaja {
-    text-align: center;
-    padding: 20px;
-}
-
-.ventaja .icono {
-    font-size: 2.5em;
-    display: block;
-    margin-bottom: 15px;
-}
-
-.ventaja p {
-    font-size: 1.1em;
-}
-
-.ventaja strong {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 1.2em;
-}
+/* Sectores y ventajas */
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.dos h3{font-size:1.9rem;margin-bottom:10px;border-bottom:3px solid var(--cobre);padding-bottom:8px;display:inline-block}
+.dos p,.ventajas dd{color:var(--gris);max-width:44ch}
+.ventajas{background:var(--acero-2)}
+.ventajas dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px}
+.ventajas dt{font:600 1.6rem 'Barlow Condensed',sans-serif;margin-bottom:4px}
 
 /* Contacto */
-.contacto-contenido {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-}
+.contacto-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.tel-grande{display:block;font-size:clamp(2.6rem,7vw,4.4rem);font-weight:700;text-decoration:none;color:var(--cobre);margin-bottom:20px}
+.datos p{margin-bottom:10px}
+.datos span{color:var(--gris)}
+.acciones{display:flex;flex-direction:column;gap:12px;align-self:start}
+.acciones .btn{text-align:center;border-color:var(--grafito);color:var(--grafito)}
+.acciones .btn:hover{background:var(--grafito);color:var(--acero)}
+iframe{display:block;width:100%;height:380px;border:0;margin-top:56px;filter:grayscale(.6)}
+footer{background:var(--grafito);color:var(--acero-2);padding:32px 0;font-size:.9rem}
 
-.contacto-info p {
-    margin: 20px 0;
-    font-size: 1.1em;
-    line-height: 1.8;
-}
+/* Barra inferior solo móvil */
+.barra-movil{display:none}
 
-.contacto-info a {
-    color: #2c5aa0;
-    text-decoration: none;
-    font-weight: 500;
+@media(max-width:768px){
+  .nav ul{display:none}
+  .hero .wrap,.dos,.contacto-grid{grid-template-columns:1fr}
+  .hero .wrap{padding-top:48px;padding-bottom:56px}
+  .estator{max-width:220px;justify-self:start}
+  .servicios li{grid-template-columns:1fr;gap:4px}
+  section{padding:56px 0}
+  .btn-lineal{margin:12px 0 0}
+  body{padding-bottom:58px}
+  .barra-movil{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:50}
+  .barra-movil a{padding:16px;text-align:center;font-weight:600;text-decoration:none;color:var(--blanco);background:var(--cobre)}
+  .barra-movil a+a{background:var(--grafito)}
 }
-
-.contacto-info a:hover {
-    text-decoration: underline;
-}
-
-.contacto-acciones {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.btn-llamada {
-    background: #ff6b35;
-    color: white;
-}
-
-.btn-whatsapp {
-    background: #25D366;
-    color: white;
-}
-
-.btn-email {
-    background: #2c5aa0;
-    color: white;
-}
-
-/* Mapa */
-iframe {
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-/* Footer */
-footer {
-    background: #1a1a1a;
-    color: #ccc;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer p {
-    margin: 8px 0;
-}
-
-/* Responsive para móvil */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.7em;
-    }
-    
-    .tagline {
-        font-size: 1.1em;
-    }
-    
-    nav {
-        text-align: center;
-    }
-    
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-    
-    .servicios-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contacto-contenido {
-        grid-template-columns: 1fr;
-    }
-    
-    .marcas-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .sectores-grid,
-    .ventajas-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Animación suave al hacer scroll */
-html {
-    scroll-behavior: smooth;
-}
+@media(prefers-reduced-motion:reduce){.estator{animation:none}html{scroll-behavior:auto}}
