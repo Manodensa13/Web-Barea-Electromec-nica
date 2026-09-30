@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Electromecánica [Nombre] - Motores, generadores y cuadros eléctricos</title>
 <meta name="description" content="Reparación y rebobinado de motores y generadores eléctricos. Venta de motores ABB, Siemens. Servicio técnico PRAMAC. [Tu ciudad]">
+<link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
@@ -13,7 +14,10 @@
 <body>
 <nav class="nav">
   <div class="wrap">
-    <strong>Electromecánica [Nombre]</strong>
+    <div class="marca-nav">
+      <img class="nav-logo" src="img/logo.png" alt="" width="54" height="54">
+      <strong>Electromecánica [Nombre]</strong>
+    </div>
     <ul>
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#marcas">Marcas</a></li>
@@ -31,13 +35,7 @@
       <a href="tel:+34600000000" class="btn btn-principal">Llamar ahora</a>
       <a href="#contacto" class="btn btn-lineal">Pedir presupuesto</a>
     </div>
-    <svg class="estator" viewBox="0 0 200 200" role="img" aria-label="Sección de un estator con bobinado de cobre">
-      <circle cx="100" cy="100" r="92" fill="none" stroke="#2a3036" stroke-width="10"/>
-      <circle cx="100" cy="100" r="76" fill="none" stroke="#c8642b" stroke-width="16" stroke-dasharray="14.9 5.2"/>
-      <circle cx="100" cy="100" r="58" fill="none" stroke="#e8ebed" stroke-width="4"/>
-      <circle cx="100" cy="100" r="22" fill="#2a3036"/>
-      <circle cx="100" cy="100" r="6" fill="#c8642b"/>
-    </svg>
+    <img class="logo-hero" src="img/logo.png" alt="Logotipo de Electromecánica [Nombre]" width="340" height="340">
   </div>
 </header>
 
@@ -116,5 +114,11 @@
   <a href="tel:+34600000000">Llamar</a>
   <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
 </div>
+<script>
+  // Al salir la portada de la pantalla, el logo aparece en la barra
+  const nav=document.querySelector('.nav');
+  new IntersectionObserver(([e])=>nav.classList.toggle('con-logo',!e.isIntersecting),{rootMargin:'-70px 0px 0px 0px'})
+    .observe(document.querySelector('.hero'));
+</script>
 </body>
 </html>
