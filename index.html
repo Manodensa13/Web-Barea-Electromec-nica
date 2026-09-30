@@ -1,176 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromecánica [Nombre] - Motores, generadores y cuadros eléctricos</title>
-    <meta name="description" content="Reparación y rebobinado de motores y generadores eléctricos. Venta de motores ABB, Siemens. Servicio técnico PRAMAC. [Tu ciudad]">
-    <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromecánica [Nombre] - Motores, generadores y cuadros eléctricos</title>
+<meta name="description" content="Reparación y rebobinado de motores y generadores eléctricos. Venta de motores ABB, Siemens. Servicio técnico PRAMAC. [Tu ciudad]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <div class="container">
-            <h1>Electromecánica [Nombre de la empresa]</h1>
-            <p class="tagline">Reparación y mantenimiento de maquinaria eléctrica industrial en [tu ciudad]</p>
-            <a href="tel:+34600000000" class="btn-llamada">📞 Llamar ahora</a>
-        </div>
-    </header>
+<nav class="nav">
+  <div class="wrap">
+    <strong>Electromecánica [Nombre]</strong>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#marcas">Marcas</a></li>
+      <li><a href="#sectores">Sectores</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <!-- Navegación -->
-    <nav>
-        <div class="container">
-            <a href="#servicios">Servicios</a>
-            <a href="#marcas">Marcas</a>
-            <a href="#sectores">Sectores</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-    </nav>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Si tu motor se para, lo rebobinamos.</h1>
+      <p>Reparamos motores, generadores y cuadros eléctricos industriales en [tu ciudad]. Presupuesto sin compromiso.</p>
+      <a href="tel:+34600000000" class="btn btn-principal">Llamar ahora</a>
+      <a href="#contacto" class="btn btn-lineal">Pedir presupuesto</a>
+    </div>
+    <svg class="estator" viewBox="0 0 200 200" role="img" aria-label="Sección de un estator con bobinado de cobre">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#2a3036" stroke-width="10"/>
+      <circle cx="100" cy="100" r="76" fill="none" stroke="#c8642b" stroke-width="16" stroke-dasharray="14.9 5.2"/>
+      <circle cx="100" cy="100" r="58" fill="none" stroke="#e8ebed" stroke-width="4"/>
+      <circle cx="100" cy="100" r="22" fill="#2a3036"/>
+      <circle cx="100" cy="100" r="6" fill="#c8642b"/>
+    </svg>
+  </div>
+</header>
 
-    <!-- Servicios principales -->
-    <section id="servicios" class="container">
-        <h2>Nuestros servicios</h2>
-        <div class="servicios-grid">
-            <div class="servicio">
-                <h3>🔧 Motores y generadores</h3>
-                <p>Reparación y rebobinado de motores y generadores eléctricos industriales.</p>
-            </div>
-            
-            <div class="servicio">
-                <h3>🏭 Venta de motores nuevos</h3>
-                <p>Distribuidores de motores ABB, ALREN, ELEKTRIM, SIEMENS y otras marcas líderes.</p>
-            </div>
-            
-            <div class="servicio">
-                <h3>⚡ Grupos electrógenos PRAMAC</h3>
-                <p>Servicio técnico oficial de grupos electrógenos PRAMAC. Reparación y mantenimiento.</p>
-            </div>
-            
-            <div class="servicio">
-                <h3>🔌 Cuadros eléctricos</h3>
-                <p>Construcción y reparación de cuadros eléctricos, automatismos, arrancadores y variadores.</p>
-            </div>
-            
-            <div class="servicio">
-                <h3>🏗️ Maquinaria industrial</h3>
-                <p>Reparación de maquinaria eléctrica industrial de todo tipo.</p>
-            </div>
-            
-            <div class="servicio">
-                <h3>⚓ Sector naval</h3>
-                <p>Servicios especializados para el sector naval e industrial marítimo.</p>
-            </div>
-        </div>
-    </section>
+<section id="servicios">
+  <div class="wrap">
+    <h2>Qué reparamos y qué vendemos</h2>
+    <ul class="servicios">
+      <li><h3>Motores y generadores</h3><p>Reparación y rebobinado de motores y generadores eléctricos industriales.</p></li>
+      <li><h3>Motores nuevos</h3><p>Distribuidores de motores ABB, ALREN, ELEKTRIM, SIEMENS y otras marcas.</p></li>
+      <li><h3>Grupos electrógenos PRAMAC</h3><p>Servicio técnico oficial de grupos electrógenos PRAMAC: reparación y mantenimiento.</p></li>
+      <li><h3>Cuadros eléctricos</h3><p>Construcción y reparación de cuadros, automatismos, arrancadores y variadores.</p></li>
+      <li><h3>Maquinaria industrial</h3><p>Reparación de maquinaria eléctrica industrial de todo tipo.</p></li>
+      <li><h3>Sector naval</h3><p>Trabajos para barcos, astilleros y sector marítimo.</p></li>
+    </ul>
+  </div>
+</section>
 
-    <!-- Marcas -->
-    <section id="marcas" class="bg-gris">
-        <div class="container">
-            <h2>Marcas que trabajamos</h2>
-            <div class="marcas-list">
-                <span class="marca">ABB</span>
-                <span class="marca">ALREN</span>
-                <span class="marca">ELEKTRIM</span>
-                <span class="marca">SIEMENS</span>
-                <span class="marca">PRAMAC</span>
-                <span class="marca">Y más...</span>
-            </div>
-        </div>
-    </section>
+<section id="marcas" class="marcas">
+  <div class="wrap">
+    <h2>Marcas con las que trabajamos</h2>
+    <div class="marcas-lista">
+      <span class="marca">ABB</span><span class="marca">ALREN</span><span class="marca">ELEKTRIM</span><span class="marca">SIEMENS</span><span class="marca">PRAMAC</span>
+    </div>
+    <small>Y otras marcas bajo consulta.</small>
+  </div>
+</section>
 
-    <!-- Sectores -->
-    <section id="sectores" class="container">
-        <h2>Sectores que atendemos</h2>
-        <div class="sectores-grid">
-            <div class="sector">
-                <h3>🏭 Industrial</h3>
-                <p>Maquinaria eléctrica, motores, generadores y automatismos para industria.</p>
-            </div>
-            <div class="sector">
-                <h3>⚓ Naval</h3>
-                <p>Servicios especializados para barcos, astilleros y sector marítimo.</p>
-            </div>
-        </div>
-    </section>
+<section id="sectores">
+  <div class="wrap dos">
+    <div><h3>Industria</h3><p>Motores, generadores y automatismos para fábricas y plantas de producción.</p></div>
+    <div><h3>Naval</h3><p>Reparación y mantenimiento para barcos, astilleros y empresas marítimas.</p></div>
+  </div>
+</section>
 
-    <!-- Por qué elegirnos -->
-    <section class="bg-azul">
-        <div class="container">
-            <h2>¿Por qué elegirnos?</h2>
-            <div class="ventajas-grid">
-                <div class="ventaja">
-                    <span class="icono">✅</span>
-                    <p><strong>Experiencia</strong><br>Más de [X] años en el sector</p>
-                </div>
-                <div class="ventaja">
-                    <span class="icono">🚀</span>
-                    <p><strong>Rapidez</strong><br>Servicio técnico ágil</p>
-                </div>
-                <div class="ventaja">
-                    <span class="icono">📋</span>
-                    <p><strong>Presupuesto</strong><br>Sin compromiso</p>
-                </div>
-                <div class="ventaja">
-                    <span class="icono">🔒</span>
-                    <p><strong>Garantía</strong><br>Trabajos garantizados</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="ventajas">
+  <div class="wrap">
+    <h2>Por qué confiar en nosotros</h2>
+    <dl>
+      <div><dt>Más de [X] años</dt><dd>De experiencia en el sector.</dd></div>
+      <div><dt>Respuesta rápida</dt><dd>Servicio técnico ágil cuando la máquina está parada.</dd></div>
+      <div><dt>Presupuesto sin compromiso</dt><dd>Te lo damos antes de empezar.</dd></div>
+      <div><dt>Trabajo garantizado</dt><dd>Respondemos por cada reparación.</dd></div>
+    </dl>
+  </div>
+</section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="container">
-        <h2>Contacto</h2>
-        <div class="contacto-contenido">
-            <div class="contacto-info">
-                <p>📞 <strong>Teléfono:</strong> <a href="tel:+34600000000">600 000 000</a></p>
-                <p>📧 <strong>Email:</strong> <a href="mailto:info@empresa.com">info@empresa.com</a></p>
-                <p>📍 <strong>Dirección:</strong> Polígono Industrial [Nombre], Calle [Nombre], [Número]<br>[Código Postal] [Ciudad], [Provincia]</p>
-                <p>🕐 <strong>Horario:</strong> Lunes a Viernes: 8:00 - 18:00</p>
-                <p>🚐 <strong>Zona de servicio:</strong> [Ciudad] y toda la provincia de [Provincia]</p>
-            </div>
-            
-            <div class="contacto-acciones">
-                <a href="tel:+34600000000" class="btn btn-llamada">
-                    📞 Llamar
-                </a>
-                <a href="https://wa.me/34600000000" class="btn btn-whatsapp" target="_blank">
-                    💬 WhatsApp
-                </a>
-                <a href="mailto:info@empresa.com" class="btn btn-email">
-                    📧 Email
-                </a>
-            </div>
-        </div>
-    </section>
+<section id="contacto">
+  <div class="wrap">
+    <h2>Cuéntanos qué necesitas</h2>
+    <div class="contacto-grid">
+      <div class="datos">
+        <a href="tel:+34600000000" class="tel-grande">600 000 000</a>
+        <p><span>Email</span><br><a href="mailto:info@empresa.com">info@empresa.com</a></p>
+        <p><span>Dirección</span><br>Polígono Industrial [Nombre], Calle [Nombre], [Número]<br>[Código Postal] [Ciudad], [Provincia]</p>
+        <p><span>Horario</span><br>Lunes a viernes, de 8:00 a 18:00</p>
+        <p><span>Zona de servicio</span><br>[Ciudad] y toda la provincia de [Provincia]</p>
+      </div>
+      <div class="acciones">
+        <a href="tel:+34600000000" class="btn">Llamar</a>
+        <a href="https://wa.me/34600000000" class="btn" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a href="mailto:info@empresa.com" class="btn">Enviar un email</a>
+      </div>
+    </div>
+    <!-- Sustituye el src por el embed de Google Maps de tu dirección real -->
+    <iframe title="Ubicación en el mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3000!2d-3.7!3d40.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1234567890" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
 
-    <!-- Mapa -->
-    <section class="container">
-        <h2>Ubicación</h2>
-        <!-- Sustituye el src por el embed de Google Maps de tu dirección real -->
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3000!2d-3.7!3d40.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1234567890" 
-            width="100%" 
-            height="400" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <p style="text-align: center; margin-top: 15px;">
-            <a href="https://maps.google.com/?q=[Dirección completa]" target="_blank">
-                🗺️ Ver en Google Maps
-            </a>
-        </p>
-    </section>
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Electromecánica [Nombre]. Reparación de motores y generadores eléctricos en [Ciudad].</p>
+  </div>
+</footer>
 
-    <!-- Pie de página -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Electromecánica [Nombre]. Todos los derechos reservados.</p>
-            <p>Reparación de motores y generadores eléctricos en [Ciudad]</p>
-        </div>
-    </footer>
-    <!-- Primera publicación de la web -->
+<div class="barra-movil">
+  <a href="tel:+34600000000">Llamar</a>
+  <a href="https://wa.me/34600000000" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 </body>
 </html>
