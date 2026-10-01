@@ -116,6 +116,9 @@
   const nav=document.querySelector('.nav');
   new IntersectionObserver(([e])=>nav.classList.toggle('con-logo',!e.isIntersecting),{rootMargin:'-70px 0px 0px 0px'})
     .observe(document.querySelector('.hero'));
+  // En móvil, al bajar la barra se queda fina (solo logo y nombre)
+  const compactar=()=>{const y=window.scrollY;if(y>40)nav.classList.add('compacta');else if(y<10)nav.classList.remove('compacta');};
+  addEventListener('scroll',compactar,{passive:true});compactar();
 </script>
 </body>
 </html>
