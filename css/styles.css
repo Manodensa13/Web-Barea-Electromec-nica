@@ -21,7 +21,7 @@ a{color:inherit}
 
 /* Hero */
 .hero{background:var(--marino);color:var(--acero);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:80px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding-top:70px;padding-bottom:80px}
 .hero h1{font-size:clamp(2.8rem,7vw,5.4rem);font-weight:700;margin-bottom:22px}
 .hero p{max-width:46ch;color:var(--acero-2);font-size:1.15rem;margin-bottom:32px}
 .btn{display:inline-block;padding:14px 26px;font-weight:600;text-decoration:none;border:2px solid var(--azul);transition:background .2s,color .2s}
@@ -29,7 +29,7 @@ a{color:inherit}
 .btn-principal:hover{background:transparent;color:var(--azul)}
 .btn-lineal{color:var(--acero);margin-left:10px}
 .btn-lineal:hover{background:var(--azul);color:var(--marino-2)}
-.logo-hero{width:100%;max-width:340px;height:auto;justify-self:center;background:var(--blanco);padding:32px;border-radius:4px}
+.logo-hero{width:100%;max-width:500px;height:auto;justify-self:center;background:var(--blanco);padding:40px;border-radius:4px}
 
 /* Secciones */
 section{padding:80px 0}
@@ -47,7 +47,7 @@ h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:700;margin-bottom:36px;max-width
 .marcas-lista{display:flex;flex-wrap:wrap;gap:12px 48px}
 .marca{font-size:clamp(2rem,5vw,3.4rem);font-weight:600;color:var(--acero-2)}
 .marca:hover{color:var(--azul)}
-.marcas small{display:block;margin-top:24px;color:var(--gris)}
+.marcas small{display:block;margin-top:24px;color:var(--blanco)}
 
 /* Sectores y ventajas */
 .dos{display:grid;grid-template-columns:1fr 1fr;gap:56px}
@@ -75,12 +75,12 @@ footer{background:var(--marino-2);color:var(--acero-2);padding:32px 0;font-size:
   .nav ul{display:none}
   .hero .wrap,.dos,.contacto-grid{grid-template-columns:1fr}
   .hero .wrap{padding-top:48px;padding-bottom:56px}
-  .logo-hero{max-width:280px;padding:20px;justify-self:start}
+  .logo-hero{max-width:100%;padding:24px;justify-self:stretch}
   .servicios li{grid-template-columns:1fr;gap:4px}
   section{padding:56px 0}
   .btn-lineal{margin:12px 0 0}
   body{padding-bottom:58px}
-  .barra-movil{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:50}
+  .barra-movil{display:grid;grid-template-columns:1fr;position:fixed;bottom:0;left:0;right:0;z-index:50}
   .barra-movil a{padding:16px;text-align:center;font-weight:600;text-decoration:none;color:var(--marino-2);background:var(--azul)}
   .barra-movil a+a{background:var(--marino);color:var(--blanco)}
 }
